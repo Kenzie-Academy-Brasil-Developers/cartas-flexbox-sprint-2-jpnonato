@@ -8,15 +8,27 @@ html {
 
 .icon {color: #BCD2DA;}
 
+body{
+  display: flex;
+  justify-content: center;
+  
+}
+
 .card {
     /* display, flex-direction */
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .card__description {
-    /* display, flex-direction, justify-content, align-items */
+    /* xdisplay, xflex-direction, xjustify-content, xalign-items */
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
     padding: 15px 0;
 }
 
@@ -40,16 +52,18 @@ html {
 }
 
 .cardGroup {
-    /* display */
-  
-    border: 1px solid #CAD0D2;
-    border-radius: 4px;
-    overflow: hidden;
-  }
+  /* display */
+  display: flex;
+  border: 1px solid #CAD0D2;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 710px;
+    
+}
   
     .cardGroup__card {
       /* flex-grow, flex-shrink, flex-basis */
-  
+      flex-basis: 33.33%;
       border: none;
       border-radius: 0;
     }
@@ -60,4 +74,40 @@ html {
   
     .cardGroup__cardDescription {
       /* flex-grow, flex-shrink, flex-basis */
+      flex-basis: 60%;
     }
+
+@media screen and (max-width: 425px) {
+  .card__price {
+    text-align: center;
+    color: #57727C;
+    font-size: 8.75px;
+    font-weight: 700;
+    padding: 5px 15px;
+    border-top: 1px solid #D7DBDD;
+    background-color: #EEF3F5;
+  }
+
+  .card__descriptionText {
+    color: #57727C;
+    font-size: 8.5px;
+    text-align: center;
+    max-width: calc(100% - 30px);
+  } 
+
+    .cardGroup__card {
+      justify-content: flex-end;
+  }
+
+    .cardGroup {
+      display: flex;
+      border: 1px solid #CAD0D2;
+      border-radius: 4px;
+      overflow: hidden;
+      width: 320px;
+      height: 130px;
+  }
+  
+
+}
+      
